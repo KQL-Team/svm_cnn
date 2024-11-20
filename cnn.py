@@ -30,4 +30,5 @@ class CNN(tf.keras.Model):
         x = self.flatten(x)
         x = self.fcl_1(x)
         x = self.drop_out_3(x)
+        x = self.fcl_2(x)
         return self.output_layer(x)
