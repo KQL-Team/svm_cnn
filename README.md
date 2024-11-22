@@ -1,9 +1,9 @@
 # Support Vector Machine and NasNet for Image classification
 
 This repository contains a project that integrates Support Vector Machines (SVM) with Convolutional Neural Networks (CNN) for image classification tasks. The model is designed to classify images using SVM as the final classification layer, leveraging the power of CNN for feature extraction.
-
-## Project Structure
 ```
+## Project Structure
+
 svm_cnn/ ├── .idea/ # IDE configuration files (e.g., for PyCharm) ├── Image_processing/DATASET/ # Dataset for training and testing ├── pycache/ # Python bytecode cache ├── nasnet_svm/ # SVM model definition and training scripts ├── train_models/ # Folder containing scripts for training models ├── .gitattributes # Git attributes configuration file └── README.md # This file
 ```
 ## Installation
