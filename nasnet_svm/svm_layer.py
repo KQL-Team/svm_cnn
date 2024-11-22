@@ -12,7 +12,23 @@ class svm_layer(Layer):
     def call(self, inputs):
         output = tf.matmul(inputs, self.readout_weight) + self.bias
         return output
-    def hinge_loss(self, y_true, y_pred):
-        loss = tf.reduce_mean(tf.maximum(0., 1 - y_true * y_pred))
-        regularization_loss = tf.reduce_mean(tf.square(self.readout_weight))
-        return self.penalty_para*loss + regularization_loss
+
+
+
+class MultiClassSVM(Layer):
+    def __init__(self, num_classes, penalty_para=1.0):
+        super(MultiClassSVM, self).__init__()
+        self.num_classes = num_classes
+        self.penalty_para = penalty_para
+        self.svm_layers = []
+
+    def build(self, input_shape):
+        for _ in range(self.num_classes):
+            self.svm_layers.append(svm_layer(penalty_para=self.penalty_para))
+        super().build(input_shape)
+
+    def call(self, inputs):
+        outputs = []
+        for svm in self.svm_layers:
+            outputs.append(svm(inputs))
+        return tf.stack(outputs, axis=-1)
