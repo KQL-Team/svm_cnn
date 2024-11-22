@@ -26,11 +26,11 @@ pip install -r requirements.txt
 ````
 ## Usage
 
-__1.Data Preparation: Ensure your dataset is organized and ready in the Image_processing/DATASET/ folder. The dataset should be in subfolders corresponding to each class.
+__1.Data Preparation:__ Ensure your dataset is organized and ready in the Image_processing/DATASET/ folder. The dataset should be in subfolders corresponding to each class.
 
-__2.Training the Model: You can train the model using the script nasnet_svm/nasnet_svm.ipynb. This script loads the dataset, applies CNN for feature extraction, and trains an SVM classifier for the final prediction layer.
+__2.Training the Model:__ You can train the model using the script nasnet_svm/nasnet_svm.ipynb. This script loads the dataset, applies CNN for feature extraction, and trains an SVM classifier for the final prediction layer.
 
-__3.Testing the Model: After training, you can use the model for testing predictions on new images by running the test script in the experiment.ipynb.
+__3.Testing the Model:__ After training, you can use the model for testing predictions on new images by running the test script in the experiment.ipynb.
 
 ## SVM + Nasnet Architecture
 This project integrates an SVM as the final layer of a CNN model. The CNN layers are used to extract features from images, which are then passed to the SVM for classification.
