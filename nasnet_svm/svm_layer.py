@@ -5,7 +5,7 @@ class svm_layer(Layer):
         self.penalty_para = penalty_para
     def build(self, input_shape):
         self.readout_weight = self.add_weight(name='readout_weight',
-                                              shape=(input_shape[-1],),
+                                              shape=(input_shape[-1], 1),
                                               initializer='normal_normal',
                                               trainable=True)
         self.bias = self.add_weight(name='bias', shape=(1,), initializer='zeros', trainable=True )
