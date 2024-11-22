@@ -10,27 +10,28 @@ To run this project, you need to have Python 3.x installed along with the necess
 
 ```bash
 pip install -r requirements.txt
-# Usage
+````
+## Usage
 
-Data Preparation: Ensure your dataset is organized and ready in the Image_processing/DATASET/ folder. The dataset should be in subfolders corresponding to each class.
+# 1.Data Preparation: Ensure your dataset is organized and ready in the Image_processing/DATASET/ folder. The dataset should be in subfolders corresponding to each class.
 
-Training the Model: You can train the model using the script nasnet_svm/nasnet_svm.ipynb. This script loads the dataset, applies CNN for feature extraction, and trains an SVM classifier for the final prediction layer.
+# 2.Training the Model: You can train the model using the script nasnet_svm/nasnet_svm.ipynb. This script loads the dataset, applies CNN for feature extraction, and trains an SVM classifier for the final prediction layer.
 
-Testing the Model: After training, you can use the model for testing predictions on new images by running the test script in the experiment.ipynb.
+# 3.Testing the Model: After training, you can use the model for testing predictions on new images by running the test script in the experiment.ipynb.
 
-SVM + CNN Architecture
+## SVM + Nasnet Architecture
 This project integrates an SVM as the final layer of a CNN model. The CNN layers are used to extract features from images, which are then passed to the SVM for classification.
 
 The key steps in the architecture:
 
 CNN Layers: Extract features from input images.
 SVM Layer: Use the extracted features to classify images into different categories.
-Contributing
+## Contributing
 Feel free to contribute to this project by opening issues or submitting pull requests.
 
-License
+## License
 This project is open-source and available under the MIT License.
 
-Acknowledgments
+## Acknowledgments
 Keras for deep learning model implementation.
-Scikit-learn for SVM implementation.
+Scikit-Learn for evaluate model.
