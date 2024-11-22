@@ -4,7 +4,7 @@ This repository contains a project that integrates Support Vector Machines (SVM)
 
 ## Project Structure
 ```
-svm_cnn/ │ ├── .idea/ # IDE configuration files (e.g., for PyCharm) ├── Image_processing/DATASET/ # Dataset for training and testing ├── pycache/ # Python bytecode cache ├── nasnet_svm/ # SVM model definition and training scripts ├── train_models/ # Folder containing scripts for training models ├── .gitattributes # Git attributes configuration file ├── README.md # This file
+svm_cnn/ ├── .idea/ # IDE configuration files (e.g., for PyCharm) ├── Image_processing/DATASET/ # Dataset for training and testing ├── pycache/ # Python bytecode cache ├── nasnet_svm/ # SVM model definition and training scripts ├── train_models/ # Folder containing scripts for training models ├── .gitattributes # Git attributes configuration file └── README.md # This file
 ```
 ## Installation
 
