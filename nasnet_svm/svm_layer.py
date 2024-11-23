@@ -1,5 +1,5 @@
 from tensorflow.keras.layers import Layer
-class svm_layer(Layer):
+class SVM(Layer):
     def __init__(self, penalty_para=1.0):
         super(svm_layer, self).__init__()
         self.penalty_para = penalty_para
@@ -24,7 +24,7 @@ class MultiClassSVM(Layer):
 
     def build(self, input_shape):
         for _ in range(self.num_classes):
-            self.svm_layers.append(svm_layer(penalty_para=self.penalty_para))
+            self.svm_layers.append(SVM(penalty_para=self.penalty_para))
         super().build(input_shape)
 
     def call(self, inputs):
