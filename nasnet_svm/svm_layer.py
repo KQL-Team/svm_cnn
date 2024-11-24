@@ -1,12 +1,12 @@
 from tensorflow.keras.layers import Layer
-class SVM(Layer):
-    def __init__(self, penalty_para=1.0):
-        super(svm_layer, self).__init__()
+class SVM(tf.keras.layers.Layer):
+    def __init__(self, penalty_para=1.0, **kwargs):
+        super(svm_layer, self).__init__(**kwargs)
         self.penalty_para = penalty_para
     def build(self, input_shape):
         self.readout_weight = self.add_weight(name='readout_weight',
                                               shape=(input_shape[-1], 1),
-                                              initializer='normal_normal',
+                                              initializer='random_normal',
                                               trainable=True)
         self.bias = self.add_weight(name='bias', shape=(1,), initializer='zeros', trainable=True )
     def call(self, inputs):
